@@ -20,6 +20,7 @@ module.exports = [
     config: {
       origin: [
         'http://localhost:3000',
+        'http://localhost:3002',
         'https://unroasted.vercel.app',
         'https://www.unroasted.vercel.app',
       ],
