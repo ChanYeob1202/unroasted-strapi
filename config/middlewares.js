@@ -1,3 +1,4 @@
+// Middleware configuration for Strapi
 module.exports = [
   'strapi::logger',
   'strapi::errors',
