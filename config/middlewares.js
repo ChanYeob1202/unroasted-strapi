@@ -19,21 +19,12 @@ module.exports = [
   {
     name: 'strapi::cors',
     config: {
-      origin: ({ env }) => {
-        const origins = [
-          'http://localhost:3000',
-          'http://localhost:3002',
-          'https://unroasted.vercel.app',
-          'https://www.unroasted.vercel.app',
-        ];
-        
-        // Add custom origin from environment variable if provided
-        if (env('CLIENT_URL')) {
-          origins.push(env('CLIENT_URL'));
-        }
-        
-        return origins;
-      },
+      origin: [
+        'http://localhost:3000',
+        'http://localhost:3002',
+        'https://unroasted.vercel.app',
+        'https://www.unroasted.vercel.app',
+      ],
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
